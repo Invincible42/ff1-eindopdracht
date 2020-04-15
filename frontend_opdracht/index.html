@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js"></script>
+    <title>Superhero Form</title>
+</head>
+<body>
+    <h1>Superhero registration form</h1>
+    <form>
+        <table>
+            <tr>
+                <td><label for="firstname">First name:</label></td>
+                <td colspan="3"><input type="text" id="firstname" name="firstname"></td>
+            </tr>
+            <tr>
+                <td><label for="lastname">Last name:</label></td>
+                <td colspan="3"><input type="text" id="lastname" name="lastname"></td>
+            </tr>
+            <tr>
+                <td><label for="superheroname">Superhero name:</label></td>
+                <td colspan="3"><input type="text" id="superheroname" name="superheroname"></td>
+            </tr>
+            <tr>
+                <td><label for="planetname">Planet of origin:</label></td>
+                <td colspan="3"><input type="text" id="planetname" name="planetname"></td>
+            </tr>
+            <tr>
+                <td colspan="4"><br></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <input id="male" type="radio" name="gender" value="male">
+                    <label for="male">male</label>
+                </td>
+                <td>
+                    <input id="female" type="radio" name="gender" value="female">
+                    <label for="female">female</label>
+                </td>
+                <td>
+                    <input id="x" type="radio" name="gender" value="x">
+                    <label for="x">X</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><br></td>
+            </tr>
+            <tr>
+                <td><label for="superpower">Superpower:</label></td>
+                <td colspan="3">
+                    <select id="superpower">
+                        <option>Can Fly</option>
+                        <option>Superstrong</option>
+                        <option>Mind reading</option>
+                        <option>Time travel</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><br></td>
+            </tr>
+            <tr>
+                <td><label for="weakness">Weakness:</label></td>
+                <td colspan="3">
+                    <input id="weakness" list="weaknesses">
+                    <datalist id="weaknesses">
+                        <option value="Kryptonite">
+                        <option value="Spiders">
+                        <option value="Coca Cola">
+                        <option value="Sushi">
+                        <option value="Corona">
+                    </datalist>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <textarea id="description" name="message" rows="8" cols="40" placeholder="Superhero description"></textarea>
+        <br>
+        <br>
+        <input id="submit" type="submit" value="Submit" onclick="alertSuperheroName();consoleLogValues()">
+    </form>
+</body>
+</html>
